@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <meta name="viewport"content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Criss Cross - HTML5 Javascript Junior Game</title>
+
+    <meta name="keywords" content="crisscross,html,game,jsgame,redishketch,web development,web application"/>
+    <meta name="description" content="Criss Cross, An HTML5 javascript junior game for entertainment."/>
+    <meta name="subject" content="Criss Cross - HTML5 Javascript Junior Game">
+    <meta name="copyright"content="Redishketch">
+    <meta name="language" content="EN">
+    <meta name="summary" content="Criss Cross, An HTML5 javascript junior game for entertainment.">
+    <meta name="author" content="Redishketch, redishketch@gmail.com">
+    <meta name="copyright" content="">
+    <meta name="owner" content="Redishketch">
+    <meta name="url" content="https://crisscross2019.github.io/">
+    <meta name="identifier-URL" content="https://crisscross2019.github.io/">
+    <meta name="category" content="website,game,programing,algorithm,development">
+    <meta name="coverage" content="Worldwide">
+    <meta name="distribution" content="Global">
+
+    <meta name="og:title" content="Criss Cross - HTML5 Javascript Junior Game"/>
+    <meta name="og:type" content="website,game,programing,algorithm,development"/>
+    <meta name="og:url" content="https://crisscross2019.github.io/"/>
+    <meta name="og:image" content="https://crisscross2019.github.io/img/banner.png"/>
+    <meta name="og:site_name" content="crisscross2019.github.io"/>
+    <meta name="og:description" content="Criss Cross, An HTML5 javascript junior game for entertainment."/>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+
+
+</head>
+<body>
+
+
+<div class="cross_board">
+    <ul class="cross_board_boxes">
+        <li class="cross_board_box cross_board_box_1"></li>
+        <li class="cross_board_box cross_board_box_2"></li>
+        <li class="cross_board_box cross_board_box_3"></li>
+        <li class="cross_board_box cross_board_box_4"></li>
+        <li class="cross_board_box cross_board_box_5"></li>
+        <li class="cross_board_box cross_board_box_6"></li>
+        <li class="cross_board_box cross_board_box_7"></li>
+        <li class="cross_board_box cross_board_box_8"></li>
+        <li class="cross_board_box cross_board_box_9"></li>
+        <li class="lineCutter"></li>
+    </ul>
+</div>
+
+<audio src="audio/click.wav" id="clickSound"></audio>
+<audio src="audio/winner.wav" id="winSound"></audio>
+
+</body>
+
+<script type="application/javascript" src="js/jquery.min.js"></script>
+<script type="application/javascript" src="js/cross.js"></script>
+<script type="application/javascript" >
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('https://crisscross2019.github.io/serviceworker.js').then(function(registration) {
+                // Registration was successful
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(err) {
+                // registration failed :(
+                console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+    }
+    window.addEventListener('offline', () => {
+        console.log('Ops! We are offline');
+    });
+    window.addEventListener('online', () => {
+        console.log('Back Online');
+    });
+</script>
+</html>
